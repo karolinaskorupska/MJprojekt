@@ -9,13 +9,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 90%;
         .white_logo_text{
             display: block;
-            width: 80%;
-
+            padding-left: 10%;
         }
-        .black_logo{
+
+        .black_logo {
             display: none;
+        }
+
+    }
+    .active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .white_logo_text{
+            display: none;
+        }
+        .black_logo {
+            display: block;
+            padding-left: 10%;
         }
     }
 
@@ -23,18 +39,18 @@
  
         width: 20%;
         height: 100%;
-        background-color: aqua;
+        
         .hamburger_menu_box{
-            background-color: blue;
-            width: 100%;
+            cursor: pointer;
+            width: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            padding-right: 10%;
 
             .hamburger_menu{
-                width: 100%;
-                background-color: blueviolet;
+                margin-top: 15%;
+               
                 display: grid;
                 grid-gap: 5px;
                 grid-template-columns: repeat(3, 3fr);
@@ -49,10 +65,32 @@
                 }
             }
 
+            .active{
+                margin-top: 15%;
+               
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: repeat(3, 3fr);
+
+                div{
+                    width: 10px;
+                    height: 10px;
+                    background-color: $black;
+                    margin: 1%;
+                    display: inline-block;
+                }
+                .black_white{
+                    background-color: white;
+                }
+            }
+
 
         }
         .navigation{
             display: none;
         }
     }
+}
+.active{
+    background-color: $black;
 }
