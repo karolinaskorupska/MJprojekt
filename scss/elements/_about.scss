@@ -1,3 +1,43 @@
-.container_about{
-    background-color: $gray;
+.about{
+   
+
+    .about{
+        justify-content: center;
+
+        .about{
+            display: block;
+            color: $black;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: transparent;
+            padding: 10%;
+            @media(min-width:$lg){
+                margin-left: -7%;
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding-bottom: 0;
+                height: 40%
+            }
+            h1{
+                display: block;
+                padding: 7px 0;
+                text-align: center;
+                line-height: 28px;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            p{
+                display: block;
+                padding: 7px 0;
+                text-align: center;
+                line-height: 28px;
+                font-size: 1rem;
+                text-align: start;
+            }
+        }
+    }
+    
+
 }
