@@ -1,23 +1,26 @@
-let gulp = require("gulp");
-gulp.task("pranie", function(done) {
-    console.log("robię pranie");
-    done();
-});
-let sourcemaps = require('gulp-sourcemaps');
-let sass = require("gulp-sass");
-gulp.task("sass", function() {
-  return gulp.src("scss/main.scss")
-      .pipe(sourcemaps.init())
-	  .pipe(sass({
-      outputStyle:'expanded'
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 
-  //* compressed.
-	  }).on("error", sass.logError))
-      .pipe(sourcemaps.write())
-       .pipe(gulp.dest('css'))
+gulp.task("sass", function () {
+  return gulp
+    .src("./scss/main.scss")
+    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(gulp.dest("./css"));
 });
-gulp.task("watch", function(){
-  gulp.watch("scss/**/*.scss", gulp.series("sass"));
+//imqages
+gulp.task('images', function(){
+    return gulp.src('assets/**/*.+(png|jpg|gif|svg)')
+    .pipe(cache(imagemin({
+        interlaced:true
+    })))
+    .pipe(gulp.dest('dist/images'))
+  });
+
+// Gulp watch syntax
+gulp.task("watch", function () {
+  gulp.watch("scss/**/*.scss", gulp.series("sass","images"));
 });
 
-gulp.task("default", gulp.series("sass","watch"));
+

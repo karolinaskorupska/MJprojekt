@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    transition: 1s;
+    transition: 0.5s;
     overflow: hidden;
     // animation-name: opacity;
     // animation-duration: 1000ms;
@@ -19,8 +19,7 @@
         align-items: center;
         box-sizing: border-box;
         width: 100vw;
-        height: 100vh;
-
+        // height: 100vh;
 
     @media(min-width:$lg){
         flex-direction: row;
@@ -37,7 +36,7 @@
             }
 
         @media(min-width:$lg){
-            width: 70%;
+            width: 60%;
         }
         }
         .black_logo{
@@ -89,7 +88,7 @@
                 width: 80%;
             }
             @media(min-width:$lg){
-                width: 70%;
+                width: 60%;
             }
         }
         .navigation{
@@ -178,7 +177,7 @@
                 grid-gap: 5px;
                 grid-template-columns: repeat(3, 3fr);
                 
-                }
+                
 
                 div{
                     width: 10px;
