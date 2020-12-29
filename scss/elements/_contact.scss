@@ -1,19 +1,15 @@
 .contact{
    
-
     .contact{
         justify-content: center;
        
 
         .contact{
             display: block;
-            color: $black;
-            font-size: 1rem;
             display: flex;
             align-items: center;
             flex-direction: column;
-            background-color: transparent;
-            padding: 10%;
+
             @media(min-width:$lg){
                 margin-left: -7%;
                 align-items: flex-start;
@@ -22,11 +18,9 @@
                 height: 40%
             }
             h1{
-                display: block;
-                padding: 7px 0;
                 text-align: center;
                 line-height: 28px;
-                font-size: 2rem;
+                font-size: 32px;
                 margin-bottom: 2rem;
             }
             p{
@@ -34,11 +28,15 @@
                 padding: 7px 0;
                 text-align: center;
                 line-height: 28px;
-                font-size: 1rem;
+                font-size: 18px;
                 text-align: start;
             }
         }
-    }
-    
+    }  
+    .active{
+        .contact{
+            display: none;
+        }
+    } 
 
 }

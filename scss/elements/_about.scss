@@ -5,7 +5,8 @@
         justify-content: center;
 
         .about{
-       
+            width: auto;
+            height: auto;
             padding: 10%;
             @media(min-width:$lg){
 
