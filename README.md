@@ -1,4 +1,4 @@
 # MJprojekt
 website 
 
-http://mjprojektowanie.pl/
+https://karolinaskorupska.github.io/MJprojekt/
